@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/login', function () {
   return view('pages/login');
 });
+
+Route::get('/register', function () {
+  return view('pages/register');
+});
+
+Route::get('/tasks/create', function () {
+  return view('tasks/create-task');
+});
