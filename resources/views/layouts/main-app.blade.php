@@ -17,14 +17,14 @@
   <div class="">
 {{-- header  --}}
     <section class="relative">
-      <img class="absolute top-0 left-0" src="flaro-assets/images/headers/gradient4.svg" alt="">
+      <img class="absolute top-0 left-0" src="/flaro-assets/images/headers/gradient4.svg" alt="">
       <div class="container mx-auto overflow-hidden">
         <div class="relative z-20 flex items-center justify-between px-4 py-5 bg-transparent">
           <div class="w-auto">
             <div class="flex flex-wrap items-center">
               <div class="w-auto mr-14">
                 <a href="/">
-                  <img src="flaro-assets/logos/flaro-logo-black.svg" alt="">
+                  <img src="/flaro-assets/logos/flaro-logo-black.svg" alt="">
                 </a>
               </div>
               <div class="w-auto hidden lg:block">
@@ -72,7 +72,7 @@
                 <div class="flex items-center justify-between -m-2">
                   <div class="w-auto p-2">
                     <a class="inline-block" href="/">
-                      <img src="flaro-assets/logos/flaro-logo-black.svg" alt="">
+                      <img src="/flaro-assets/logos/flaro-logo-black.svg" alt="">
                     </a>
                   </div>
                   <div class="w-auto p-2">
@@ -201,7 +201,7 @@
         <div class="flex flex-wrap justify-between items-center py-6 -m-4">
           <div class="w-auto p-4">
             <a href="#">
-              <img src="flaro-assets/logos/flaro-logo-black.svg" alt="">
+              <img src="/flaro-assets/logos/flaro-logo-black.svg" alt="">
             </a>
           </div>
           <div class="w-auto p-4">
