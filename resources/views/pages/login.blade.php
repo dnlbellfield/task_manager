@@ -11,8 +11,7 @@
     </a> --}}
     <h2 class="mb-4 text-6xl md:text-7xl text-center font-bold font-heading tracking-px-n leading-tight">Welcome Back
     </h2>
-    <p class="mb-12 font-medium text-lg text-gray-600 leading-normal">Lorem ipsum dolor sit amet, to the con adipiscing.
-      Volutpat tempor to the condim entum.</p>
+    <p class="mb-12 font-medium text-lg text-gray-600 leading-normal">Sign in with your email and password</p>
     <form>
       <label class="block mb-5">
         <input

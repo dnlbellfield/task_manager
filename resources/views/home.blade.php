@@ -18,11 +18,11 @@
               your daily tasks
             </p>
             <div class="mb-12 md:inline-block">
-              <button
+              <a href="/register"
                 class="py-4 px-6 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                type="button">Get started</button>
+                type="button">Get started</a>
             </div>
-            <h3 class="mb-3 text-gray-900 font-semibold">Trusted by 1M+ customers</h3>
+            <h3 class="mb-3 text-gray-900 font-semibold">Trusted by 5K+ customers</h3>
             <div class="flex flex-wrap items-center -m-1">
               <div class="w-auto p-1">
                 <div class="flex flex-wrap -m-0.5">
@@ -66,10 +66,10 @@
               <div class="w-auto p-1">
                 <div class="flex flex-wrap -m-0.5">
                   <div class="w-auto p-0.5">
-                    <p class="text-gray-900 font-bold">4.2/5</p>
+                    <p class="text-gray-900 font-bold">5/5</p>
                   </div>
                   <div class="w-auto p-0.5">
-                    <p class="text-gray-600 font-medium">(45k Reviews)</p>
+                    <p class="text-gray-600 font-medium">(5k Reviews)</p>
                   </div>
                 </div>
               </div>

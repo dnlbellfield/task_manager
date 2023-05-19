@@ -39,16 +39,16 @@
             <div class="flex flex-wrap items-center">
               <div class="w-auto hidden mr-5 lg:block">
                 <div class="inline-block">
-                  <button
+                  <a href="/login"
                     class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
-                    type="button">Sign In</button>
+                    type="button">Sign In</a>
                 </div>
               </div>
               <div class="w-auto hidden lg:block">
                 <div class="inline-block">
-                  <button
+                  <a href="/register"
                     class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                    type="button">Try 14 Days Free Trial</button>
+                    type="button">Get Started</a>
                 </div>
               </div>
               <div class="w-auto lg:hidden">
@@ -97,16 +97,16 @@
                 <div class="flex flex-wrap">
                   <div class="w-full mb-3">
                     <div class="block">
-                      <button
+                      <a href="/login"
                         class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
-                        type="button">Sign In</button>
+                        type="button">Sign In</a>
                     </div>
                   </div>
                   <div class="w-full">
                     <div class="block">
-                      <button
+                      <a href="/register"
                         class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                        type="button">Register</button>
+                        type="button">Get Started</a>
                     </div>
                   </div>
                 </div>

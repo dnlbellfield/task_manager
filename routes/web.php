@@ -33,3 +33,7 @@ Route::get('/tasks/create', function () {
 Route::get('/tasks/{id}/edit', function () {
   return view('tasks/edit-task');
 });
+
+Route::get('/tasks/{id}', function () {
+  return view('tasks/show-task');
+});

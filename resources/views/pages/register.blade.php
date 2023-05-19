@@ -9,7 +9,7 @@
       <img src="flaro-assets/logos/flaro-logo-black-xl.svg" alt="">
     </a> -->
     <h2 class="mb-4 text-6xl md:text-7xl text-center font-bold font-heading tracking-px-n leading-tight">Join for free</h2>
-    <p class="mb-12 font-medium text-lg text-gray-600 leading-normal">Lorem ipsum dolor sit amet, to the con adipiscing. Volutpat tempor to the condim entum.</p>
+    <p class="mb-12 font-medium text-lg text-gray-600 leading-normal">Register your first name, last name, email address, and password. </p>
     <form>
       <label class="block mb-5">
         <input class="px-4 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="signUpInput2-1" type="text" placeholder="First &amp; Last Name">
