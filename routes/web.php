@@ -28,3 +28,8 @@ Route::get('/register', function () {
 Route::get('/tasks/create', function () {
   return view('tasks/create-task');
 });
+
+
+Route::get('/tasks/{id}/edit', function () {
+  return view('tasks/edit-task');
+});
