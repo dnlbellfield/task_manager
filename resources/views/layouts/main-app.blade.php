@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.cdnfonts.com/css/general-sans?styles=135312,135310,135313,135303" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
- {{-- removed after adding vite --}}
-  {{-- <link rel="stylesheet" href="/css/tailwind/tailwind.min.css"> --}}
+  {{-- removed after adding vite --}}
+  {{--
+  <link rel="stylesheet" href="/css/tailwind/tailwind.min.css"> --}}
   <link rel="icon" type="image/png" sizes="32x32" href="/shuffle-for-tailwind.png">
   <script src="/js/main.js"></script>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -17,7 +18,7 @@
 
 <body class="antialiased bg-body text-body font-body">
   <div class="">
-{{-- header  --}}
+    {{-- header --}}
     <section class="relative">
       <img class="absolute top-0 left-0" src="/flaro-assets/images/headers/gradient4.svg" alt="">
       <div class="container mx-auto overflow-hidden">
@@ -32,25 +33,66 @@
               <div class="w-auto hidden lg:block">
                 <ul class="flex items-center mr-16">
                   <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Features</a></li>
-                 
+
                 </ul>
               </div>
             </div>
           </div>
           <div class="w-auto">
+            {{-- start login links --}}
+            {{-- @if (Route::has('login'))
+            <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+              @auth
+              <a href="{{ url('/dashboard') }}"
+                class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+              @else
+              <a href="{{ route('login') }}"
+                class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
+                in</a>
+
+              @if (Route::has('register'))
+              <a href="{{ route('register') }}"
+                class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+              @endif
+              @endauth
+            </div>
+            @endif --}}
+            {{-- end login links --}}
+            @if (Route::has('login'))
             <div class="flex flex-wrap items-center">
-              <div class="w-auto hidden mr-5 lg:block">
+                            <div class="w-auto hidden mr-5 lg:block">
                 <div class="inline-block">
+                
+                  @auth
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="/logout" onclick="event.preventDefault();
+                  this.closest('form').submit();"
+                      class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
+                      type="button">Logout</a>
+
+                  </form>
+
+                  @else
                   <a href="/login"
-                    class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
-                    type="button">Sign In</a>
+                  class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
+                  type="button">Sign In</a>
+           
+                  @endauth
                 </div>
               </div>
               <div class="w-auto hidden lg:block">
                 <div class="inline-block">
+                  @auth
+                  <a href="/tasks/create"
+                    class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
+                    type="button">Create Task</a>
+                  @else
                   <a href="/register"
                     class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
                     type="button">Get Started</a>
+                  @endauth
+
                 </div>
               </div>
               <div class="w-auto lg:hidden">
@@ -64,6 +106,7 @@
                 </a>
               </div>
             </div>
+            @endif
           </div>
         </div>
         <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
@@ -119,9 +162,9 @@
       </div>
 
     </section>
-{{-- content area  --}}
+    {{-- content area --}}
     @yield('content')
-{{-- footer  --}}
+    {{-- footer --}}
     <section class="pt-24 bg-white overflow-hidden">
       <div class="container px-4 mx-auto">
         <div class="pb-20 border-b">
