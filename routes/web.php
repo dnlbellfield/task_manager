@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,27 +14,62 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
 Route::get('/', function () {
-    return view('home');
+return view('home');
 });
 
+// tasks 
+Route::get('/tasks', function () {
+return view('tasks/all-tasks');
+})->middleware(['auth', 'verified']);
+
+Route::get('/tasks/create', function () {
+return view('tasks/create-task');
+})->middleware(['auth', 'verified']);
+
+Route::post('/tasks', function () {
+return view('tasks/create-task');
+})->middleware(['auth', 'verified']);
+
+Route::get('/tasks/{id}', function () {
+return view('tasks/show-task');
+})->middleware(['auth', 'verified']);
+
+Route::put('/tasks/{id}', function () {
+return view('tasks/edit-task');
+})->middleware(['auth', 'verified']);
+
+Route::get('/tasks/{id}/edit', function () {
+return view('tasks/edit-task');
+})->middleware(['auth', 'verified']);
+
+Route::delete('/tasks/{id}', function () {
+return view('tasks/edit-task');
+})->middleware(['auth', 'verified']);
+
+
+
 Route::get('/login', function () {
-  return view('pages/login');
+return view('pages/login');
 });
 
 Route::get('/register', function () {
-  return view('pages/register');
+return view('pages/register');
 });
 
-Route::get('/tasks/create', function () {
-  return view('tasks/create-task');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-Route::get('/tasks/{id}/edit', function () {
-  return view('tasks/edit-task');
-});
-
-Route::get('/tasks/{id}', function () {
-  return view('tasks/show-task');
-});
+require __DIR__.'/auth.php';
