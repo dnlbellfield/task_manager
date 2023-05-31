@@ -20,7 +20,7 @@
   <div class="">
     {{-- header --}}
     <section class="relative">
-      <img class="absolute top-0 left-0" src="/flaro-assets/images/headers/gradient4.svg" alt="">
+      <!-- <img class="absolute top-0 left-0" src="/flaro-assets/images/headers/gradient4.svg" alt=""> -->
       <div class="container mx-auto overflow-hidden">
         <div class="relative z-20 flex items-center justify-between px-4 py-5 bg-transparent">
           <div class="w-auto">
@@ -142,9 +142,24 @@
                 <div class="flex flex-wrap">
                   <div class="w-full mb-3">
                     <div class="block">
+                      @if (Route::has('login'))
+                      @auth
+                      <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a href="/logout" onclick="event.preventDefault();
+                      this.closest('form').submit();"
+                          class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
+                          type="button">Logout</a>
+    
+                      </form>
+    
+                      @else
                       <a href="/login"
-                        class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
-                        type="button">Sign In</a>
+                      class="py-3 px-5 w-full hover:text-gray-700 font-medium rounded-xl bg-transparent transition ease-in-out duration-200"
+                      type="button">Sign In</a>
+               
+                      @endauth
+                      @endif 
                     </div>
                   </div>
                   <div class="w-full">
@@ -152,6 +167,7 @@
                       <a href="/register"
                         class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
                         type="button">Get Started</a>
+                        
                     </div>
                   </div>
                 </div>
