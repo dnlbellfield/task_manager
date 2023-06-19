@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,15 +19,21 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::middleware(['auth', 'verified'])->group(function () {
+  Route::get('/tasks',[TaskController::class, 'index'] );
+
+});
 
 Route::get('/', function () {
 return view('home');
 });
 
+// Route::get('/tasks',[TaskController::class, 'index'] );
+
 // tasks 
-Route::get('/tasks', function () {
-return view('tasks/all-tasks');
-})->middleware(['auth', 'verified']);
+// Route::get('/tasks', function () {
+// return view('tasks/all-tasks');
+// })->middleware(['auth', 'verified']);
 
 Route::get('/tasks/create', function () {
 return view('tasks/create-task');
