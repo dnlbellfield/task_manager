@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'verified'])->group(function () {
   Route::get('/tasks',[TaskController::class, 'index'] );
+  Route::get('/tasks/create',[TaskController::class, 'create'] );
 
 });
 
@@ -31,13 +32,8 @@ return view('home');
 // Route::get('/tasks',[TaskController::class, 'index'] );
 
 // tasks 
-// Route::get('/tasks', function () {
-// return view('tasks/all-tasks');
-// })->middleware(['auth', 'verified']);
 
-Route::get('/tasks/create', function () {
-return view('tasks/create-task');
-})->middleware(['auth', 'verified']);
+
 
 Route::post('/tasks', function () {
 return view('tasks/create-task');
