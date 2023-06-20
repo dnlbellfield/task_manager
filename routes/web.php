@@ -19,11 +19,20 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::middleware(['auth', 'verified'])->group(function () {
-  Route::get('/tasks',[TaskController::class, 'index'] );
-  Route::get('/tasks/create',[TaskController::class, 'create'] );
+Route::group([
+  'middleware' => ['auth', 'verified'],
+  'prefix' => 'tasks'
+], (function () {
 
-});
+  Route::get('/',[TaskController::class, 'index'] );
+  Route::get('/create',[TaskController::class, 'create'] );
+  Route::post('/',[TaskController::class, 'store'] );
+  Route::get('/{id}',[TaskController::class, 'show'] );
+  Route::get('/{id}/edit',[TaskController::class, 'edit'] );
+  Route::put('/{id}',[TaskController::class, 'update'] );
+  Route::delete('/{id}',[TaskController::class, 'destroy'] );
+
+}));
 
 Route::get('/', function () {
 return view('home');
@@ -35,13 +44,13 @@ return view('home');
 
 
 
-Route::post('/tasks', function () {
-return view('tasks/create-task');
-})->middleware(['auth', 'verified']);
+// Route::post('/tasks', function () {
+// return view('tasks/create-task');
+// })->middleware(['auth', 'verified']);
 
-Route::get('/tasks/{id}', function () {
-return view('tasks/show-task');
-})->middleware(['auth', 'verified']);
+// Route::get('/tasks/{id}', function () {
+// return view('tasks/show-task');
+// })->middleware(['auth', 'verified']);
 
 Route::put('/tasks/{id}', function () {
 return view('tasks/edit-task');

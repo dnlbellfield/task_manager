@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
 use App\Models\Task;
 use App\Models\User;
+
 
 class TaskController extends Controller
 {
@@ -14,9 +16,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-
-      $tasks = User::find(1)->tasks;
-      $user = Task::find(1)->user;
+      $user = Auth::user();
+      $tasks = User::find($user->id)->tasks;
       return $tasks;
 
     }
@@ -42,7 +43,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        //
+      return view('tasks/show-task');
     }
 
     /**
