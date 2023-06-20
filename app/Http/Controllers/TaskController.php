@@ -18,7 +18,9 @@ class TaskController extends Controller
     {
       $user = Auth::user();
       $tasks = User::find($user->id)->tasks;
-      return $tasks;
+      return view('tasks/all-tasks', [
+        "tasks" => $tasks
+      ]);
 
     }
 
