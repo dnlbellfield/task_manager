@@ -39,8 +39,9 @@ class TaskController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Task $task)
+    public function show(Task $task, $id)
     {
+      $task = Task::find($id)->tasks;
       return view('tasks/show-task');
     }
 

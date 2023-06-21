@@ -164,9 +164,18 @@
                   </div>
                   <div class="w-full">
                     <div class="block">
-                      <a href="/register"
+                    @if (Route::has('login'))
+                      @auth
+                      <a href="/login"
+                        class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
+                        type="button">Create Task</a>
+
+                        @else
+                        <a href="/register"
                         class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
                         type="button">Get Started</a>
+                        @endauth
+                      @endif 
                         
                     </div>
                   </div>

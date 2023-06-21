@@ -38,33 +38,6 @@ Route::get('/', function () {
 return view('home');
 });
 
-// Route::get('/tasks',[TaskController::class, 'index'] );
-
-// tasks 
-
-
-
-// Route::post('/tasks', function () {
-// return view('tasks/create-task');
-// })->middleware(['auth', 'verified']);
-
-// Route::get('/tasks/{id}', function () {
-// return view('tasks/show-task');
-// })->middleware(['auth', 'verified']);
-
-Route::put('/tasks/{id}', function () {
-return view('tasks/edit-task');
-})->middleware(['auth', 'verified']);
-
-Route::get('/tasks/{id}/edit', function () {
-return view('tasks/edit-task');
-})->middleware(['auth', 'verified']);
-
-Route::delete('/tasks/{id}', function () {
-return view('tasks/edit-task');
-})->middleware(['auth', 'verified']);
-
-
 
 Route::get('/login', function () {
 return view('pages/login');
