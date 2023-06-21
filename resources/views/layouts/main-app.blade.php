@@ -32,7 +32,7 @@
               </div>
               <div class="w-auto hidden lg:block">
                 <ul class="flex items-center mr-16">
-                  <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Features</a></li>
+                  <!-- <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Features</a></li> -->
 
                 </ul>
               </div>

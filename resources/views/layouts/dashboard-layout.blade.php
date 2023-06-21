@@ -32,7 +32,7 @@
               </div>
               <div class="w-auto hidden lg:block">
                 <ul class="flex items-center mr-16">
-                  <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Features</a></li>
+                  {{-- <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Features</a></li> --}}
 
                 </ul>
               </div>
@@ -203,7 +203,7 @@
                     </svg></span>
                   Throw Garbage out</a>
               </li> --}}
-              @foreach ( $tasks as $task )
+              @foreach ( $userTasks as $task )
               <li>
                 <a href="/tasks/{{$task->id}}" class="mt-3 pt-3  w-full flex ">
                   <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
