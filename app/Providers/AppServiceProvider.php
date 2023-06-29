@@ -23,8 +23,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // take two views ( 'dashboard' and 'all-tasks') and 
+        // passes them to the callback to bind data.
+        // the code fetches the tasks related to the authenticated user and makes them available within the view using the 'userTasks' variable. This allows you to display or manipulate the tasks associated with the user in the rendered view.
         View::composer(['layouts.dashboard-layout', 'tasks.all-tasks'], function($view){
+          // take the currently auth user
           $user = Auth::user();
+          // Assign the fetched tasks to the $userTasks variable within the view being composed. This allows you to access the tasks within the view using the $userTasks variable.
           $view->with('userTasks', User::find($user->id)->tasks);
         });
     }

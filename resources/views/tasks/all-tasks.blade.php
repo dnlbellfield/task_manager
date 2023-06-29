@@ -7,11 +7,13 @@
 
 
 <h1 class="mb-6 text-6xl font-bold font-heading leading-normal">All Tasks</h1>
-@foreach ( $userTasks as $task )
+
 <ul class="list-disc">
+  @foreach ( $userTasks as $task )
   <li><a href="/tasks/{{$task->id}}">{{$task->title}}</a></li>
+  @endforeach
 </ul>
 
-@endforeach
+
 
 @endsection
