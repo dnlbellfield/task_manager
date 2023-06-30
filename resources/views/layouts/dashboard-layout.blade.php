@@ -198,9 +198,9 @@
           <div class="flex">
             <ul>
               <li>
-                <a href="#"
+                <a href="/tasks/create"
                   class=" py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200">Create
-                  New Task</a>
+                  Task</a>
               </li>
               {{-- <li>
                 <a href="#" class="mt-3 pt-3  w-full flex ">
