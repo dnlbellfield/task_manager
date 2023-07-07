@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // take two views ( 'dashboard' and 'all-tasks') and 
+        // View::composer take two views ( 'dashboard' and 'all-tasks') and 
         // passes them to the callback to bind data.
         // the code fetches the tasks related to the authenticated user and makes them available within the view using the 'userTasks' variable. This allows you to display or manipulate the tasks associated with the user in the rendered view.
         View::composer(['layouts.dashboard-layout', 'tasks.all-tasks'], function($view){
