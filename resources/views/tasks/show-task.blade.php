@@ -6,7 +6,6 @@
 
  
       <h1 class="mb-6 text-7xl font-bold font-heading leading-normal">{{$task->title}}</h1>
-      
       <p>{{$task->description}}</p>
       <div class="my-7">
         <a href="/tasks/{{$task->id}}/edit"
