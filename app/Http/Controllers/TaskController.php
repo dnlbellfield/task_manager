@@ -33,7 +33,14 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        //
+      $user = Auth::user();
+      $task = new Task;
+      $task->title = $request->title;
+      $task->description = $request->description;
+      $task->user_id = $user->id;
+      $task->save();
+      
+      return redirect("/tasks");
     }
 
     /**
@@ -50,17 +57,29 @@ class TaskController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Task $task)
+    public function edit(Task $task, $id)
     {
-        //
+      $task = Task::find($id);
+      return view('tasks/edit-task', [
+        "task" => $task
+      ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTaskRequest $request, Task $task)
+    public function update(UpdateTaskRequest $request,Task $task, $id)
     {
-        //
+      $user = Auth::user();
+      $task = Task::find($id);
+       $task->title = $request->title;
+
+      $task->description = $request->description;
+      $task->user_id = $user->id;
+     
+      $task->save();
+      
+      return redirect("/tasks/{$id}");
     }
 
     /**

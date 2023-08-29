@@ -9,9 +9,7 @@
     <div class="relative container px-4 mx-auto">
       <div class="flex flex-wrap -m-8">
         <div class="w-full md:w-1/2 lg:w-4/12 xl:w-6/12 p-8">
-          <h1 class="mb-9 text-6xl md:text-8xl lg:text-13xl font-bold font-heading md:max-w-2xl leading-none">Keep
-            Track of
-            Your Tasks
+          <h1 class="mb-9 text-6xl md:text-8xl lg:text-13xl font-bold font-heading md:max-w-2xl leading-none">Task Manager
           </h1>
           <div>
             <p class="mb-9 text-xl text-gray-900 font-medium md:max-w-sm">Get the best-in-class tool for tracking

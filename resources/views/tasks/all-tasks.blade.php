@@ -10,7 +10,7 @@
 
 <ul class="list-disc">
   @foreach ( $userTasks as $task )
-  <li><a href="/tasks/{{$task->id}}">{{$task->title}}</a></li>
+  <li class="ml-6 text-3xl text-left font-heading leading-normal"><a href="/tasks/{{$task->id}}">{{$task->title}}</a></li>
   @endforeach
 </ul>
 

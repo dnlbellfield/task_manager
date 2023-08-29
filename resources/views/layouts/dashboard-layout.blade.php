@@ -214,7 +214,7 @@
               </li> --}}
               @foreach ( $userTasks as $task )
               <li>
-                <a href="/tasks/{{$task->id}}" class="mt-3 pt-3  w-full flex ">
+                <a href="/tasks/{{$task->id}}" class="mt-3 pt-2  w-full flex ">
                   <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                       stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round"
@@ -244,7 +244,7 @@
       <div class="container px-4 mx-auto">
         <div class="pb-20 border-b">
           <div class="flex flex-wrap -m-8">
-            <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
+            {{-- <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
               <h3 class="mb-6 font-semibold leading-normal">Company</h3>
               <ul>
                 <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
@@ -255,67 +255,16 @@
                     href="#">Press</a></li>
                 <li><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">Blog</a></li>
               </ul>
-            </div>
+            </div> --}}
             <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
               <h3 class="mb-6 font-semibold leading-normal">Pages</h3>
               <ul>
                 <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                     href="#">Login</a></li>
                 <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
-                    href="#">Register</a></li>
-                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">Add
-                    list</a></li>
-                <li><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">Contact</a></li>
-              </ul>
+                    href="#">Register</a></li> </ul>
             </div>
-            <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
-              <h3 class="mb-6 font-semibold leading-normal">Legal</h3>
-              <ul>
-                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
-                    href="#">Terms</a></li>
-                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
-                    href="#">About Us</a></li>
-                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
-                    href="#">Team</a></li>
-                <li><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">Privacy</a></li>
-              </ul>
-            </div>
-            <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
-              <h3 class="mb-6 font-semibold leading-normal">Resources</h3>
-              <ul>
-                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
-                    href="#">Blog</a></li>
-                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
-                    href="#">Service</a></li>
-                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
-                    href="#">Product</a></li>
-                <li><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">Pricing</a></li>
-              </ul>
-            </div>
-            <div class="w-full sm:w-1/2 lg:w-4/12 p-8">
-              <div class="lg:max-w-sm">
-                <h3 class="mb-6 font-semibold leading-normal">Subscribe</h3>
-                <p class="mb-5 font-sans text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit.</p>
-                <div
-                  class="mb-3 xl:pl-6 inline-block md:max-w-xl w-full overflow-hidden border border-gray-300 rounded-xl focus-within:ring focus-within:ring-indigo-300">
-                  <div class="flex flex-wrap items-center">
-                    <div class="w-full xl:flex-1">
-                      <input
-                        class="p-3 xl:p-0 xl:pr-6 w-full font-medium text-gray-500 placeholder-gray-500 outline-none"
-                        id="footerInput1-1" type="text" placeholder="Type your e-mail">
-                    </div>
-                    <div class="w-full xl:w-auto">
-                      <div class="block">
-                        <button
-                          class="py-4 px-8 w-full text-white font-semibold border border-indigo-700 focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                          type="button">Subscribe</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
         <div class="flex flex-wrap justify-between items-center py-6 -m-4">
@@ -325,7 +274,7 @@
             </a>
           </div>
           <div class="w-auto p-4">
-            <p class="text-sm text-gray-600 font-medium">Copyright © 2022 Flaro. All Rights Reserved</p>
+            <p class="text-sm text-gray-600 font-medium">Copyright © 2023 Flaro. All Rights Reserved</p>
           </div>
           <div class="w-auto p-4">
             <div class="flex flex-wrap -m-4">
